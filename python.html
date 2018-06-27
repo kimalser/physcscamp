@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<!--
+Webpage created by Jessica Wong in 2016.
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Python Activity</title>
+                <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+		<!-- bootstrap -->
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<!-- other css tricks -->
+		<link href="assets/css/tricks.css" rel="stylesheet">
+		<style>
+			.alert-info {
+				margin-bottom: 0px;
+			}
+
+			body {
+				height: 100%;
+			}
+		
+			th {
+				text-align:center;
+				padding-top:5px;
+				padding-bottom:5px;
+				padding-left:10px;
+				padding-right:10px;
+				background-color:grey;
+			}
+		
+			td {
+				text-align:center;
+				padding-top:5px;
+				padding-bottom:5px;
+				padding-left:10px;
+				padding-right:10px;
+			}
+		</style>
+	</head>
+
+	<body data-spy="scroll" data-target="#my-nav">
+		<div class="jumbotron well-sm">
+			<div class="container">
+				<h1><strong>Python Activity</strong></h1>
+				<p>Welcome to the Python activity page! Here you will learn step-by-step how to code in Python!
+				<p>Look for the <strong>text in bold</strong> for basic instructions and information; the regular text will give more details if you need them.</p>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="row">
+				<!-- navigation bar -->
+				<div id="my-nav" class="col-md-3">
+					<ul id="sidebar" class="nav nav-pills nav-stacked" role="tablist" data-spy="affix" data-offset-top="250">
+						<li><a href="#setuppython">1. Getting Started</a></li>
+						<li><a href="#howtooutput">2. How to Output</a></li>
+						<li><a href="#variables">3. Variables</a></li>
+						<li><a href="#ifstatement">4. If Statements</a></li>
+						<li><a href="#forloop">5. For Loops</a></li>
+						<li><a href="#turtles">6. Turtles!</a></li>
+						<li><a href="#challengeactivities">7. Activities</a></li>
+						
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#more-information">More information<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#comparisons">Different kinds of conditions you can use</a></li>
+							</ul>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="col-md-9 content">
+					<section id="setuppython">
+					<h3><span class="numbercircle">1</span> Getting Started</h3>
+					<ol class="list-group">
+						<li class="list-group-item"><strong>Open Firefox</strong> by double-clicking the icon on the desktop, or by clicking on the start menu and typing <code>Firefox</code> into the search bar and clicking on the Firefox application (you can also use another browser, such as Chrome or Safari)</li>
+						<li class="list-group-item"><strong>Log in</strong> to <a href="https://thimble.mozilla.org">Firefox Thimble</a> and open the file called <code>code.py</code>. We will be using this file to code in Python!</li>
+						
+					</ol>
+
+					</section>
+					
+					<section id="howtooutput">
+					<h3><span class="numbercircle">2</span> How to Output</h3>
+					<ol class="list-group">
+						<li class="list-group-item"><strong>Type <code>print(&#34;Hello World!&#34;)</code>, save </strong> the file and <strong> click </strong> the <code>run</code> button.</li>
+							<ol>
+								<li class="list-group-item"><code>print()</code> tells Python what it is supposed to do (in this case, print something out to the screen).</li>
+								<li class="list-group-item"><code>&#34;Hello World!&#34;</code> tells Python what is supposed to be printed to screen. In Python, you need to enclose text phrases in quotes!</li>
+							</ol>
+						</ol>
+					
+						
+					</section>
+
+					<section id="variables">
+					<h3><span class="numbercircle">3</span> Variables</h3>
+					<ol class="list-group">
+						<li class="list-group-item"><strong>Variables are nothing but space in the computer’s memory to store values. You can give it a name and use that name to refer to the value stored in that space. The name can only contain letters, numbers and underscore.</strong></li>
+							
+						<li class="list-group-item">To create a variable, give the variable a name and assign it a value using the = sign.</li>
+							<ol>
+								<li class="list-group-item"><code>num = 1</code> means that we have made a variable called num and given it a value of 1.</li>
+								<li class="list-group-item">Variables can store decimal values too. <code>myfloat = 7.2</code>.</li>
+								<li class="list-group-item">To store text, use single or double quotes. For example, <code>str_hw = &#34;Hello World!&#34;</code> or <code>mystring = &#39;hello&#39;</code>.</li>
+							</ol>
+						<li class="list-group-item"><strong>Exercise:</strong> Save your name into a variable <code>myname</code> and run <code>print("Hi " + myname) </code> </li>
+					</ol>
+					</section>
+
+					<section id="ifstatement">
+						<h3><span class="numbercircle">4</span> If Statements</h3>
+						<ol class="list-group">
+							<li class="list-group-item">In Python you can use <strong><code>if</code> statements </strong>in the following way: <br />
+								<code>
+									age = 14<br>
+									if age > 20:<br>
+									&emsp;&emsp;&emsp;&emsp;print(&#39;You are old!&#39;)<br>
+								</code>
+								<div class="alert alert-dismissable alert-info" role="alert">
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times</span></button>
+										<strong>Pro Tip!</strong> You can use <code><</code>, <code>></code> or <code>==</code> to make comparisons. Notice that in an <code>if</code> statement, you have to use double "equals" sign. One "equals" sign tells Python to assign a value to something (x = 5 assigns the value of 5 to the variable x). Two "equals" signs means that you are checking two things to see if they are equal (age == 20 checks to see if the value of the age variable is 20).
+								</div>
+								</li>
+							</ol>
+							
+							<ol class="list-group">
+							<li class="list-group-item"><strong>If-else statements are an extended form of if statements</strong>. The else statement tells Python what should happen if the if-statement is not true.</li>
+							<li class="list-group-item">
+								<code>
+									fruit = &#39;apple&#39;<br>
+									if fruit == &#39;apple&#39;:<br>
+									&emsp;&emsp;&emsp;&emsp;print(&#39;Yum! I love apples!&#39;)<br>
+									else:<br>
+									&emsp;&emsp;&emsp;&emsp;print(&#39;No, I want an apple!&#39;)<br>
+								</code>
+							</li>
+							<li class="list-group-item"><strong>Exercise: </strong> Create variables for your name and age. Display <code>&#34;Hi &lt;name&gt;, you can drive!&#34;</code> if your age is more than 16, otherwise display, <code>&#34;Hi &lt;name&gt;, you still have &lt;x&gt; years to go&#34;</code>, where x is the difference between your age and 16.</li>
+						</ol>
+							
+						<div class="alert alert-dismissable alert-info" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times</span></button>
+								<strong>Pro Tip!</strong> You are not limited to just checking to see if a variable is equal to a certain value. You can check for many different things. See the <a href="#comparisons">Comparison</a> section for more details
+						</div>
+					</section>
+					
+					<section id="forloop">
+						<h3><span class="numbercircle">5</span> For Loops</h3>
+						<ol class="list-group">
+							<li class="list-group-item">What if you want to print <code>"Hello World!"</code> 5 times? 100 times? <strong><code>For</code> loops are used when you want instructions to run a certain number of times</strong>. Let's print <code>"Hello World!"</code> 5 times!</li>
+							<li class="list-group-item">
+							<code>
+							for x in range(5):<br>
+							&emsp;&emsp;&emsp;&emsp;print("Hello World!")<br>
+							</code></li>
+							<ol>
+								<li class="list-group-item"><code>range(5)</code> gives a sequence of numbers starting from 0 and up to (but not including) 5. Each iteration of the loop, it saves the number into variable <code>x</code>. Try replacing <code>"Hello World!"</code> by <code>x</code> and see what happens!</li>
+							</ol>
+							<li class="list-group-item"><strong>Exercise:</strong> Calculate the square of each number from 1 to 10 using a loop.</li>
+						</ol>
+					</section>
+					
+					<section id="turtles">
+						<h3><span class="numbercircle">6</span> Turtles!</h3>
+					
+					</section>
+
+					
+					<section id="challengeactivities">
+					<h3><span class="numbercircle">7</span>Activities</h3>
+					
+					</section>
+
+					<hr/>
+
+					<a name="more-info"></a>
+					<h2>More information</h2>
+					
+					<a name="comparisons"></a>
+					<h3>Comparisons</h3>
+					<table>
+						<tr>
+							<th>Operator</th>
+							<th>Description</th>
+							<th>Example</th>
+						</tr>
+						
+						<tr>
+							<td>==</td>
+							<td>If the values of two operands are equal, then the condition becomes true.</td>
+							<td>a == b</td>
+						</tr>
+						
+						<tr>
+							<td>!=</td>
+							<td>If values of two operands are not equal, then condition becomes true.</td>
+							<td>a != b</td>
+						</tr>
+						
+						<tr>
+							<td>&gt;</td>
+							<td>If the value of left operand is greater than the value of right operand, then condition becomes true.</td>
+							<td>a &gt; b</td>
+						</tr>
+						
+						<tr>
+							<td>&lt;</td>
+							<td>If the value of left operand is less than the value of right operand, then condition becomes true.</td>
+							<td>a &lt; b</td>
+						</tr>
+						
+						<tr>
+							<td>&gt;=</td>
+							<td>If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>
+							<td>a &gt;= b</td>
+						</tr>
+						
+						<tr>
+							<td>&lt;=</td>
+							<td>If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>
+							<td>a &lt;= b</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="row text-center">
+				<hr/>
+				<h2>References</h2>
+			</div>
+
+			<div class="row">
+				<ul>
+					<li><a href="python.html" target="_blank">A detailed version of the Python activity</a></li>
+					<li><a href="http://inventwithpython.com/chapters/" target="_blank">A few advanced Python games you can make on your own</a></li>
+					<li><a href="https://www.codecademy.com/learn/python" target="_blank">Code Academy&#39;s Python Tutorial</a></li>
+					<li><a href="http://www.learnpython.org/" target="_blank">LearnPython.org&#39;s free interactive Python tutorial</a></li>
+					<li><a href="http://docs.python-guide.org/en/latest/intro/learning/" target="_blank">The Hitchhiker’s Guide to Python!</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/bootswatch.js"></script>
+<!--		<script src="../assets/js/tricks.js"></script>-->
+
+	</html>

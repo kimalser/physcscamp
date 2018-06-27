@@ -1,0 +1,425 @@
+<!--
+Manual originally created by Rebecca McKnight for the GIRLsmarts 2014 workshops
+Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim in 2017 for UBC PhysCamps.
+-->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style></head><body data-spy="scroll" data-target="#my-nav"><doctype html="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Activity</title>
+
+
+<!-- bootstrap -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<!-- other css tricks -->
+<link href="assets/css/tricks.css" rel="stylesheet">
+<div class="jumbotron well-sm">
+	<div class="container">
+		<h1><strong>HTML Activity</strong></h1>
+		<p>Welcome to the HTML Activity page! <br>
+		Here you will learn step-by-step how to create your own webpage.
+		</p>
+	</div>
+</div>
+
+<div class="container">
+
+	<div class="row">
+
+		<!-- navigation bar -->
+		<div id="my-nav" class="col-md-3">
+			<ul id="sidebar" class="nav nav-pills nav-stacked affix-top" role="tablist" data-spy="affix" data-offset-top="250">
+				<li class=""><a href="#getready">1. Getting started </a></li>
+				<li class=""><a href="#html">2. HTML</a></li>
+				<li class=""><a href="#htmltodo">3. HTML TO-DO List</a></li>
+				<li class=""><a href="#css">4. CSS</a></li>
+				<li class=""><a href="#csstodo">5. CSS TO-DO List</a></li>
+
+				<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#more-info">More information<span class="caret"></span></a>
+				<ul class="dropdown-menu">
+					<li><a href="#meta-tag">What do meta and title tags do?</a></li>
+				</ul>
+				</li>
+
+			</ul>
+		</div>
+
+		<div class="col-md-9 content">
+
+			<section id="getready">
+			<h3><span class="numbercircle">1</span> Getting Started </h3>
+			<ol class="list-group">
+				<li class="list-group-item">
+				<strong> Let's get started! </strong> Websites that you see while browsing the internet, are nothing more than simple <strong>textfiles</strong>. So to write your own website, you don't need anything more than just a simple <strong>text editor</strong>.
+				During these lessons, we are going to use <a href="https://thimble.mozilla.org">Firefox Thimble</a>, because it provides a nice way to display your website as you make changes to it, however everything can as well be done in a simple text editor offline.					
+				</li>
+				
+				<li class="list-group-item">
+				Now, let's have a look at the code of a <strong> simple webpage</strong>! 
+				Log in to <a href="https://thimble.mozilla.org">Firefox Thimble</a> and open the provided sample website. You should see something like this:
+				</li>
+
+				<li class="list-group-item">
+				<div class="thumbnail with-caption row text-center">
+				<a href="assets/imgs/screenshot1.png"><img src="assets/imgs/screenshot1.png" alt="An image showing Firefox Thimble screen"></a>
+				</div>
+				</li>
+
+			</ol>
+			
+			</section>
+			
+			<section id="html">
+			
+			<h3><span class="numbercircle">2</span> HTML</h3>
+
+			<ol class="list-group">
+				<li class="list-group-item"> Alright, let's find out what all that text means. 
+				Structure of HTML pages is defined by <strong>tags</strong> that <strong>surround</strong> their content and carry some specific functionality. Below, in the provided code, you can see quite a few tags:
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Made with Thimble&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to Thimble&lt;/h1&gt;
+    &lt;p&gt;
+      Make something &lt;strong&gt;amazing&lt;/strong&gt; with the web!
+    &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+					<div class="alert alert-dismissable alert-info" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+						It is <strong>important</strong> to notice, that some tags consist of two parts: an <code>&lt;opening tag&gt;</code> and a <code>&lt;/closing tag&gt;</code>. The difference is that the latter has the <code>/</code> (slash) character. Also notice, how the content, is "wrapped" inside of those tags.
+					</div>
+					<br>
+					<ul>
+					<li>The line <code>&lt;!DOCTYPE html&gt;</code> tells a browser which version of HTML the webpage is written in but in HTML5 (that we are using), you just write <code>&lt;!DOCTYPE html&gt;</code> without specifying any particular version.</li>
+					<li>The <code>&lt;html&gt;</code> tag tells the browser that it is an HTML document. It also serves as a container for all other HTML elements.</li>
+					<li>And just like us, all HTML documents have a <code>&lt;head&gt;</code> and a <code>&lt;body&gt;</code>. Inside a <code>&lt;head&gt;</code> tag, we can specify ...
+						<ul>
+						<li><code>&lt;meta&gt;</code> defines parameters of your webpage. For now, don't worry about it, these are just some "standard" parameters that every webpage needs to have. If you're curious what they do, it is explained in <a href="#more-info">"More Information"</a> section below.</li> 
+						<li><code>&lt;link&gt;</code> tag defines a link between your HTML document and any other external resource. Here, we use <code>&lt;link&gt;</code> to reference our style sheet. We'll cover what a stylesheet is later.</li>
+						</ul>
+					<li>Inside the <code>&lt;title&gt;</code> tag, you can set your webpage's title. Easy!</li>
+					<li>All the other content, such as captions, text, images, etc., will go inside the <code>&lt;body&gt;</code> tags. In the code above, there are <code>&lt;h1&gt;</code>, <code>&lt;strong&gt;</code> and <code>&lt;p&gt;</code> tags.
+						<ul>
+						<li><code>&lt;h1&gt;</code> is a tag that is used for headers. </li>
+						<li>As you could guess, the <code>&lt;strong&gt;</code> tag allows you to emphasize the text by making it bold.</li>
+						<li>Finally, <code>&lt;p&gt;</code> stands for paragraph and just wraps paragraphs of plain text.</li>
+						</ul>
+					</li>
+					</ul>
+				</li>
+				
+
+				<li class="list-group-item"><strong>Have fun making your webpage!</strong> Try modifying and customizing headers, title, and text in your webpage.
+				</li>
+				<li class="list-group-item">
+				Firefox Thimble also provides functionality of inserting little code snippets. <strong> You can try some of those too! </strong> See the screenshot below:
+				<div class="thumbnail with-caption row text-center">
+					<a href="assets/imgs/thimble trick.png"><img src="assets/imgs/thimble trick.png" alt="An image showing the additional finctionality provided by Firefox Thimble"></a>
+				</div>
+
+				</li>
+			</ol>
+			</section>
+
+			<section id="htmltodo">
+			
+			<h3><span class="numbercircle">3</span> HTML TO-DO List</h3>
+			<ol class="list-group">
+				<li class="list-group-item">
+				<a name="change-heading-size"></a>
+				<h3>1. Change the size of your headings</h3>
+				<ol>
+					<li>Headings are what we call the title of your section. Your section headings are between two container markup tags which may look like <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code>.</li>
+					<li>There are six types of headings: <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, and <code>&lt;h6&gt;</code>. <code>&lt;h1&gt;</code> is the largest and <code>&lt;h6&gt;</code> is the smallest.</li>
+					<ul>
+						<li><i>Tip: Don't use headings to make words big and bold. Web browsers use the heading tags to figure out what sections are in your website. See the rest of this section for how to make words big and bold without using the heading tags!</i></li>
+					</ul>
+				</ol>
+
+				
+				<a name="change-font-size"></a>
+				<h3>2. Change the font size</h3>
+				<ol>
+					<li><strong>Add a font tag to the body of your HTML</strong> like so: <tt>&lt;font size="7"&gt;My re-sized text here&lt;/font&gt;</tt> and replace <tt>7</tt> with a number from 1 to 7 (where 1 is the smallest, and 7 is the biggest), and <tt>My re-sized text here</tt> with the text you want to be big or small!
+					<ul>
+						<li><i>Tip: Remember that you can <strong>nest</strong> tags inside one another, so you can do things like use both <tt>&lt;font&gt;</tt> and <tt>&lt;b&gt;</tt> tags to make text both a different size and bold</i></li>
+					</ul>
+					</li>
+				</ol>
+
+				<a name="change-font-colour"></a>
+				<h3>3. Change the font colour</h3>
+				<ol>
+					<li><strong>Choose a colour and copy its hex code</strong> by going to <a href="http://www.colorpicker.com/" target="_blank">an online colour picking tool</a>, finding a colour you like, and copying the six-digit code that represents it, which looks like <tt>#aaaaaa</tt>, except that the <tt>a</tt>'s can be letters (from a-f) or numbers</li>
+					<li><strong>Add a font tag to the body of your HTML</strong> like so: <tt>&lt;font color="#aaaaaa"&gt;My colourful text here&lt;/font&gt;</tt> making sure to replace <tt>aaaaaa</tt> with the hex code you copied in the first step, and <tt>My colourful text here</tt> with the text you want to be colourful!
+					<ul>
+						<li><i>Tip: You can add multiple attributes (like <tt>size</tt> and <tt>color</tt>) to the same <tt>&lt;font&gt;</tt> tag! For example: <tt>&lt;font size="7" color="#ff0000"&gt;My big red text here&lt;/font&gt;</tt></i></li>
+					</ul>
+					</li>
+					
+				</ol>
+
+				<a name="change-background"></a>
+				<h3>4. Change the background</h3>
+				<p>You can choose to make your background a certain colour or make the background of your webpage a certain picture.</p>
+
+				<h4>If you want to make your background a certain colour:</h4>
+				<ol>
+					<li><strong>Choose a colour and copy its hex code</strong> by going to <a href="http://www.colorpicker.com/" target="_blank">an online colour picking tool</a>, finding a colour you like, and copying the six-digit code that represents it, which looks like <tt>#aaaaaa</tt>, except that the <tt>a</tt>'s can be letters (from a-f) or numbers.</li>
+					<li><strong>Add the following to the body tag</strong> <tt>&lt;style="background-color:#aaaaaa</tt> making sure to replace <tt>aaaaaa</tt> with the hex code you copied in the first step. Don't forget the # in front of your colour code!</li>
+				</ol>
+
+				<h4>If you want to make your background a certain image:</h4>
+				<ol>
+					<li><strong>Choose a picture and copy its URL (or you can save a picture to desktop)</strong>.</li>
+					<li><strong>Add the following to the body tag</strong> <tt>&lt;style="background-image:url('aaaaaa')</tt> making sure to replace <tt>aaaaaa</tt> with the URL you copied in the first step.</li>
+				</ol>
+
+				<a name="add-a-link"></a>
+				<h3>5. Add a link</h3>
+				<ol>
+					<li><strong>Copy a website URL</strong> by opening the webpage in a new tab, then selecting the URL in the browser's bar and pressing CTRL-C to copy it</li>
+					<li><strong>Add an anchor tag to the body of your HTML</strong> like so: <tt>&lt;a href="http://www.example.com/page.html"&gt;My Link Text&lt;/a&gt;</tt> making sure to replace <tt>http://www.example.com/page.html</tt> with the URL you copied in the first step, and <tt>My Link Text</tt> with what you want the link to say.</li>
+					<li>To link to another webpage that you have made, simply replace the URL with the location and name of the webpage you want to link to. For example, if I am working on a webpage that has been saved to Desktop and I want to make a link to another webpage called Jessica.html that is also saved on Desktop, I would use <tt>&lt;a href="Jessica.html"&gt;My Link Text&lt;/a&gt;</tt>. If Jessica.html is stored in a folder on Desktop called "OtherWebpages", I would have to use <tt>&lt;a href="OtherWebpages/Jessica.html"&gt;My Link Text&lt;/a&gt;</tt> to link to Jessica.html.
+				</li></ol>
+
+				<a name="add-an-image"></a>
+				<h3>6. Add an image</h3>
+				<ol>
+					<li><strong>Copy an image URL</strong> by looking up an image (try <a href="http://images.google.com/" target="_blank">Google Images</a>), then right-clicking on the image and choosing "Copy Image URL" from the menu</li>
+					<li><strong>Add an image tag to the body of your HTML</strong> like so: <tt>&lt;img src="http://www.example.com/image.jpg"&gt;</tt> making sure to replace <tt>http://www.example.com/image.jpg</tt> with the URL you copied in the first step.</li>
+				</ol>
+
+				<a name="add-a-video"></a>
+				<h3>7. Add a YouTube video</h3>
+				<ol>
+					<li><strong>Go to <a href="http://www.youtube.com/" target="_blank">YouTube</a> and choose a video</strong></li>
+					<li><strong>Copy the embed code</strong> by right-clicking on the video and choosing "Copy Embed Code"</li>
+					<li><strong>Paste the embed code</strong> into the body of your HTML file
+				</li></ol>
+				
+				<a name="making-a-list"></a>
+				<h3>8. Make a list</h3>
+				<ol>
+					<li>There are two types of lists: ordered and unordered. Ordered lists are lists that have numbers before each item (like the list you are looking at now!) while unordered lists have bullet points before each item.</li>
+					<li>To make an ordered list, use <code>&lt;ol&gt;</code> and <code>&lt;/ol&gt;</code> to encapsulate each item of your list. To denote each individual item, surround it with <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code>.</li>
+					<div class="thumbnail with-caption row text-center">
+						<a href="assets/imgs/ordered list.png"><img src="assets/imgs/ordered list.png" alt="An image showing the HTML code for an ordered list and how the list would look in the web browser."></a>
+					</div>
+					<li>To make an unordered list, use <code>&lt;ul&gt;</code> and <code>&lt;/ul&gt;</code> to encapsulate each item of your list. To denote each individual item, surround it with <code>&lt;li&gt;</code> and <code>&lt;/li&gt;</code>.</li>
+					<div class="thumbnail with-caption row text-center">
+						<a href="assets/imgs/unordered list.png"><img src="assets/imgs/unordered list.png" alt="An image showing the HTML code for an unordered list and how the list would look in the web browser."></a>
+					</div>
+				</ol>
+				</li>
+			</section>
+
+			<section id="css">
+				<h3><span class="numbercircle">4</span> CSS</h3>
+				<ol class="list-group">
+					<li class="list-group-item">
+					<h4>Introduction</h4>
+						What is <strong>CSS</strong>? It stands for <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets. CSS gives us control over how HTML elements are displayed. Practically all styling of websites are made with CSS. Below is the example of how the exact same HTML can look with different stylesheets.
+
+					<div class="thumbnail with-caption row text-center">
+						<a href="assets/imgs/different css.png"><img src="assets/imgs/different css.png" alt="An image showing how the same website can look like with different css layouts"></a>
+						<p> Source: <a href="https://www.w3schools.com/css/css_intro.asp">w3schools</a></p>
+					</div>
+
+					To use CSS, we need to include the link to our CSS file inside the HTML document. This is exactly what this line did for us:
+					  <code>&lt;link rel="stylesheet" href="style.css"&gt;</code>
+					</li>
+
+					<li class="list-group-item">
+					<h4>How to change a tag's style</h4>
+					
+					To define a style for an HTML tag, you need to have the following pieces of information:<br>
+						<font class="tag-name">tag_name</font> {<br>
+						 <font class="property-name">property-name</font>: <font class="value-name">value</font>;<br>
+						 <font class="property-name">property-name2</font>: <font class="value-name">value2</font>;<br>
+						}
+						<br><br>
+						<font class="tag-name">tag_name</font> refers to the tag you want to style. For example, if you want to make all <code>&lt;h1&gt;</code> section headings purple and italicized, the <font class="tag-name">tag_name</font> would be h1.<br><br>
+						<font class="property-name">property-name</font> refers to the property you want to change about the tag. For example, if you want the section heading to be blue, you would use <em>color</em> as the <font class="property-name">property-name</font> and <em>blue</em> as the <font class="value-name">value</font>.
+						</li>
+						<div class="alert alert-dismissable alert-info" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<strong>Pro Tip!</strong> Note the spelling of color. In CSS, we use the Americanized version of spelling.
+						</div>
+						<li class="list-group-item">The code to make our h1 section headings purple and italicized would look like:<br>
+							<font class="tag-name">h1</font> {<br>
+							 <font class="property-name">color</font>: <font class="value-name">#bb22ee</font>;<br>
+							 <font class="property-name">font-style</font>: <font class="value-name">italic</font>;<br>
+							}</li>
+							<h1 class="h1-example">My Purple Italicized Heading</h1>
+
+
+						<div class="alert alert-dismissable alert-info" role="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+							<strong>Pro Tip!</strong> Don't forget the semicolon after each property-name:value line. Semicolons are used to diffrentiate between properties that you want to change.
+						</div>
+						<br>
+					<li class="list-group-item">
+					<h4>How to change style of a group of items</h4>
+					But sometimes, we only want a <strong> selected group </strong> of tags have a <em>"special"</em> property. For example, we want some images to appear large and other images to appear small on our page. What do we do then, if all images use the same <code>&lt;img&gt;</code> tag? <br><br>
+
+					In such cases, CSS provides a possibility to access elements by their class, and multiple elements can belong to the same class. So, going back to our example, we can do something like:<br><br>
+
+					<font class="tag-name">.small_image</font> {<br>
+					     <font class="property-name">width:</font> <font class="value-name">100px</font>;<br>
+					     <font class="property-name">height:</font> <font class="value-name">auto</font>;<br>
+					}<br><br>
+
+					<font class="tag-name">.medium_image </font>{<br>
+					     <font class="property-name">width:</font> <font class="value-name">300px</font>;<br>
+					     <font class="property-name">height:</font> <font class="value-name">auto</font>;<br>
+					}<br><br>
+
+					<div class="alert alert-dismissable alert-info" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+						<strong>Pro Tip!</strong> Notice that when we use classes (as opposed to tag names) we put a period before the name to indicate that it is not actually a tag name but a class name.
+					</div><br>
+					Then, in HTML we will set classes to items as follows:<br>
+					<code>&lt;img class="small-image" src="example.jpg"/&gt;</code><br>
+					<code>&lt;img class="medium-image" src="example.jpg"/&gt;</code><br>
+
+					<img class="small-image" src="assets/imgs/fox.jpg"/>
+					<img class="medium-image" src="assets/imgs/fox.jpg"/>
+
+					</li>
+					<li class="list-group-item">
+					<h4>How to change style of one item</h4>
+					There is an even more granular way of changing an element's style: through ids. Ids are unique: each element's id should be different. So, you can assign an HTML tag an id, and access that tag's style by its id. There is not much difference if you use classes or ids to change styles. But the difference becomes apparent when we learn javascript (next class!).<br><br>
+					So, for instance, we could do something like this:<br>
+
+					<font class="tag-name">#my-red-text </font>{<br>
+					     <font class="property-name">color:</font> <font class="value-name">red</font>;<br>
+					     <font class="property-name">background-color:</font> <font class="value-name">yellow</font>;<br>
+					}<br>
+
+					<div class="alert alert-dismissable alert-info" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+						<strong>Pro Tip!</strong> Notice that when we use ids (as opposed to tag names and classes) we put a hashtag sign before the name to indicate that it is not actually a tag name but an id.
+					</div><br>
+					Then, in HTML we will set ids as follows:<br>
+
+					<code>&lt;h1 id="my-red-text"&gt; Hello World! &lt;/h1&gt;</code><br><br>
+					And it will look like:
+					<h1 id="my-red-text"> Hello World! </h1>
+
+					</li>
+					<li class="list-group-item"><strong>To see all the things you can control with CSS, visit the <a href="http://www.w3schools.com/cssref/default.asp">w3schools page</a></strong>.</li>					
+				</ol>
+			</section>
+				
+
+			<section id="csstodo">
+				<h3><span class="numbercircle">5</span> CSS TO-DO List</h3>
+				<ol class="list-group">
+					<li class="list-group-item">
+						<h3> CSS Exercises</h3>
+						<p>CSS provides us with flexibility to change the style of an entire webpage by only editing the CSS file. Implement the tasks below by changing <code>style.css</code> file and adding classes/ids to the HTML elements. <i>No inline styling is allowed!</i></p>
+
+						<h3>1. Change the font size of any heading tag</h3>
+						<ul>
+							<li><i>Tip:</i> You may choose to change any heading tag and set the font size to any (reasonable) number. The property name you might want to play with is <code>font-size</code>. For all the possible ways that you can change font sizes, refer to <a href="https://www.w3schools.com/css/css_font.asp">w3schools CSS fonts page</a>.</li>
+						</ul>
+						<br>
+
+						<h3>2. Make the weblinks colour different </h3>
+						<ul>
+							<li> The default link color is <font color="#0000ff">blue</font>. Make the weblinks colour different from the default.</li>
+							<li><i>Tip:</i> To do this, please refer to the CSS examples above.</li>
+							<li><a href="https://www.w3schools.com/colors/colors_picker.asp">Color Picker</a> may be useful to you for choosing colors of various hues and shades.
+						</ul>
+						<br>
+						<h3>3. Change the background of your website</h3>
+						<ul>
+							<li><i>Tip:</i> You can either choose a different background colour or a background image. Those two properties correspond to <code>background-color</code> and <code>background-image</code>. More information is available at <a href="https://www.w3schools.com/css/css_background.asp">w3schools CSS backgrounds page</a>.</li>
+						</ul>
+						<br>
+						<h3>4. Insert images of different sizes.</h3>
+						<ul>
+							<li>Specify three classes of images: <code>small_image</code>, <code>medium_image</code> and <code>large_image</code>, that have widths of maximum 100px, 300px and 500px respectively.</li>
+							<li> Have at least one image of each size.
+							<li><i>Tip:</i> You can look at the image examples above to see how to define and use CSS classes.</li>
+						</ul>
+						<br>
+						<h3>5. Change the style of any element with CSS id.</h3>
+						<ul>
+							<li>Which HTML element you pick to change, is up to you. The only "rule" is to use CSS ids for doing that.</li>							
+							<li><i>Tip:</i> Look at the code above to see some examples.</li>
+						</ul>
+						<br>
+						<h3>6. Change the font of your webpage.</h3>
+						<ul>
+							<li>You already reached this exercise? It means that you are up to some challenge!</li>						
+							<li>Google provides an easy way to incorporate all sorts of fonts into websites through <b><a href="https://fonts.google.com/">Google Fonts</a></b>. Can you figure out how to use them?</li>
+						</ul>
+						<br>
+						<h3>7. Make your perfect website!</h3>
+						<ul>
+							<li>Alright! Now you have all necessary tools to <b>stylize your website</b>.</li>
+							<li>Experiment with styles and make your website look amazing!</li>
+						</ul>			
+					</li>
+				</ol>
+			</section>
+			
+
+			<a name="more-info"></a>
+			<h2>More information</h2>
+			
+			<ol class="list-group">
+				<li class="list-group-item">
+				<a name="meta-tag"></a>
+				<h3>What do <code>&lt;meta&gt;</code> and <code>&lt;title&gt;</code> tags do?</h3>
+				<ul>
+				<li>As was said earlier, <code>&lt;meta&gt;</code> sets the webpage's parametres. In the code example above, <code>charset</code> specifies the character set used in the HTML document. <em> Viewport</em> is the area of a web page that is visible to a user, so <code>"viewport"</code> tells the browser how to control the page's dimensions and scaling.</li>
+
+				<li>In a browser, the <em>title</em> is what will be shown on the webpage's tab. If you host your webpage on the internet, and search for it in Google or other search engine, the title is also what they will show to you in search results.</li>
+				</ul>
+
+				</li>
+			</ol>	
+
+
+
+
+		<a name="references"></a>
+		<h2>References</h2>
+		<ol class="list-group">
+			<li class="list-group-item">
+				<div class="row">
+					<ul>
+						<li><a href="http://www.w3schools.com/tags/default.asp" target="_blank">W3Schools HTML Tag Reference</a></li>
+						<li><a href="http://www.w3schools.com/html/default.asp" target="_blank">W3Schools HTML Tutorial</a></li>
+						<li><a href="http://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></li>
+						<li><a href="http://www.htmldog.com/" target="_blank">HTMLDog Tutorials for HTML, CSS, and JavaScript</a></li>
+						<li><a href="http://www.codecademy.com/tracks/web" target="_blank">Code Academy HTML Tutorial</a></li>
+						<li><a href="https://www.codecademy.com/learn/javascript" target="_blank">Code Academy Javascript Tutorial</a></li>
+					</ul>
+				</div>
+			</li>
+		</ol>
+
+	</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootswatch.js"></script>
+
+	
+</doctype></body></html>

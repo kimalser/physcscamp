@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 7, 2017, 9:00:54 AM
+    Author     : leetcat
+*/
+
+.alert-info {
+	margin-bottom: 0px;
+}
+
+body {
+	height: 100%;
+}
+
+.tag-name {
+	color: red;
+}
+
+.property-name {
+	color: blue;
+}
+
+.value-name {
+	color: green;
+}
+	
+.numberCircle {
+	display: inline-block;
+	border-radius: 50%;
+	behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+
+	width: 50px;
+	height: 50px;
+	padding: 8px;
+
+	background: #fff;
+	border: 2px solid #666;
+	color: #666;
+	text-align: center;
+
+	/*
+	font: 32px Arial, sans-serif;
+	 */
+}
+
+#nav.affix {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index:10;
+}
+
+#sidebar.affix-top {
+	position: static;
+}
+
+#sidebar.affix {
+	position: fixed;
+	top: 80px;
+}
+
+.small-image {
+	width: 100px;
+	height: auto;
+}
+
+.medium-image {
+	max-width: 300px;
+	height: auto;
+}
+
+#my-red-text {
+	color: red;
+	background-color: yellow;
+}
+
+.h1-example {
+	color: #bb22ee;
+	font-style: italic;
+}
