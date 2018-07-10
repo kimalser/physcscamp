@@ -101,6 +101,7 @@ Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim
 					</div>
 					<br>
 					<ul>
+					<li><b>Let's break down the code above tag by tag.</b></li>
 					<li>The line <code>&lt;!DOCTYPE html&gt;</code> tells a browser which version of HTML the webpage is written in but in HTML5 (that we are using), you just write <code>&lt;!DOCTYPE html&gt;</code> without specifying any particular version.</li>
 					<li>The <code>&lt;html&gt;</code> tag tells the browser that it is an HTML document. It also serves as a container for all other HTML elements.</li>
 					<li>And just like us, all HTML documents have a <code>&lt;head&gt;</code> and a <code>&lt;body&gt;</code>. Inside a <code>&lt;head&gt;</code> tag, we can specify ...
@@ -151,9 +152,9 @@ Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim
 				<a name="change-font-size"></a>
 				<h3>2. Change the font size</h3>
 				<ol>
-					<li><strong>Add a font tag to the body of your HTML</strong> like so: <tt>&lt;font size="7"&gt;My re-sized text here&lt;/font&gt;</tt> and replace <tt>7</tt> with a number from 1 to 7 (where 1 is the smallest, and 7 is the biggest), and <tt>My re-sized text here</tt> with the text you want to be big or small!
+					<li><strong>Add a font tag to the body of your HTML</strong> like so:<code><tt>&lt;font size="7"&gt;My re-sized text here&lt;/font&gt;</tt></code> and replace <tt>7</tt> with a number from 1 to 7 (where 1 is the smallest, and 7 is the biggest), and <tt>My re-sized text here</tt> with the text you want to be big or small!
 					<ul>
-						<li><i>Tip: Remember that you can <strong>nest</strong> tags inside one another, so you can do things like use both <tt>&lt;font&gt;</tt> and <tt>&lt;b&gt;</tt> tags to make text both a different size and bold</i></li>
+						<li><i>Tip: Remember that you can <strong>nest</strong> tags inside one another, so you can do things like use both <code><tt>&lt;font&gt;</tt></code> and <code><tt>&lt;b&gt;</tt></code> tags to make text both a different size and bold</i></li>
 					</ul>
 					</li>
 				</ol>
@@ -162,9 +163,9 @@ Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim
 				<h3>3. Change the font colour</h3>
 				<ol>
 					<li><strong>Choose a colour and copy its hex code</strong> by going to <a href="http://www.colorpicker.com/" target="_blank">an online colour picking tool</a>, finding a colour you like, and copying the six-digit code that represents it, which looks like <tt>#aaaaaa</tt>, except that the <tt>a</tt>'s can be letters (from a-f) or numbers</li>
-					<li><strong>Add a font tag to the body of your HTML</strong> like so: <tt>&lt;font color="#aaaaaa"&gt;My colourful text here&lt;/font&gt;</tt> making sure to replace <tt>aaaaaa</tt> with the hex code you copied in the first step, and <tt>My colourful text here</tt> with the text you want to be colourful!
+					<li><strong>Add a font tag to the body of your HTML</strong> like so: <code><tt>&lt;font color="#aaaaaa"&gt;My colourful text here&lt;/font&gt;</tt></code> making sure to replace <tt>aaaaaa</tt> with the hex code you copied in the first step, and <tt>My colourful text here</tt> with the text you want to be colourful!
 					<ul>
-						<li><i>Tip: You can add multiple attributes (like <tt>size</tt> and <tt>color</tt>) to the same <tt>&lt;font&gt;</tt> tag! For example: <tt>&lt;font size="7" color="#ff0000"&gt;My big red text here&lt;/font&gt;</tt></i></li>
+						<li><i>Tip: You can add multiple attributes (like <tt>size</tt> and <tt>color</tt>) to the same <code><tt>&lt;font&gt;</tt></code> tag! For example: <code><tt>&lt;font size="7" color="#ff0000"&gt;My big red text here&lt;/font&gt;</tt></code></i></li>
 					</ul>
 					</li>
 					
@@ -174,31 +175,32 @@ Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim
 				<h3>4. Change the background</h3>
 				<p>You can choose to make your background a certain colour or make the background of your webpage a certain picture.</p>
 
-				<h4>If you want to make your background a certain colour:</h4>
+				<p>If you want to make your background a certain colour:</p>
 				<ol>
 					<li><strong>Choose a colour and copy its hex code</strong> by going to <a href="http://www.colorpicker.com/" target="_blank">an online colour picking tool</a>, finding a colour you like, and copying the six-digit code that represents it, which looks like <tt>#aaaaaa</tt>, except that the <tt>a</tt>'s can be letters (from a-f) or numbers.</li>
-					<li><strong>Add the following to the body tag</strong> <tt>&lt;style="background-color:#aaaaaa</tt> making sure to replace <tt>aaaaaa</tt> with the hex code you copied in the first step. Don't forget the # in front of your colour code!</li>
+					<li><strong>Add the following to the body tag</strong> <code><tt>style="background-color:#aaaaaa"</tt></code> making sure to replace <tt>aaaaaa</tt> with the hex code you copied in the first step. Don't forget the # in front of your colour code! For example, it might look like the following: <code>&lt;body style="background-color:#95E3FC"&gt;</code></li>
 				</ol>
 
-				<h4>If you want to make your background a certain image:</h4>
+				<p>If you want to make your background a certain image:</p>
 				<ol>
 					<li><strong>Choose a picture and copy its URL (or you can save a picture to desktop)</strong>.</li>
-					<li><strong>Add the following to the body tag</strong> <tt>&lt;style="background-image:url('aaaaaa')</tt> making sure to replace <tt>aaaaaa</tt> with the URL you copied in the first step.</li>
+					<li><strong>Add the following to the body tag</strong> <code><tt>style="background-image:url('something.jpg')"</tt></code> making sure to replace <tt>something.jpg</tt> with the URL you copied in the first step.</li>
 				</ol>
 
 				<a name="add-a-link"></a>
 				<h3>5. Add a link</h3>
 				<ol>
 					<li><strong>Copy a website URL</strong> by opening the webpage in a new tab, then selecting the URL in the browser's bar and pressing CTRL-C to copy it</li>
-					<li><strong>Add an anchor tag to the body of your HTML</strong> like so: <tt>&lt;a href="http://www.example.com/page.html"&gt;My Link Text&lt;/a&gt;</tt> making sure to replace <tt>http://www.example.com/page.html</tt> with the URL you copied in the first step, and <tt>My Link Text</tt> with what you want the link to say.</li>
-					<li>To link to another webpage that you have made, simply replace the URL with the location and name of the webpage you want to link to. For example, if I am working on a webpage that has been saved to Desktop and I want to make a link to another webpage called Jessica.html that is also saved on Desktop, I would use <tt>&lt;a href="Jessica.html"&gt;My Link Text&lt;/a&gt;</tt>. If Jessica.html is stored in a folder on Desktop called "OtherWebpages", I would have to use <tt>&lt;a href="OtherWebpages/Jessica.html"&gt;My Link Text&lt;/a&gt;</tt> to link to Jessica.html.
+					<li><strong>Add an anchor tag to the body of your HTML</strong> like so: <code><tt>&lt;a href="http://www.example.com/page.html"&gt;My Link Text&lt;/a&gt;</tt></code> making sure to replace <tt>http://www.example.com/page.html</tt> with the URL you copied in the first step, and <tt>My Link Text</tt> with what you want the link to say.</li>
+					<li>To link to another webpage that you have made, simply replace the URL with the location and name of the webpage you want to link to. For example, if you have another HTML file in your Thimble that is called <tt>MySecondPage.html</tt>, you can use <code><tt>&lt;a href="MySecondPage.html"&gt;My Link Text&lt;/a&gt;</tt></code>.
 				</li></ol>
 
 				<a name="add-an-image"></a>
 				<h3>6. Add an image</h3>
 				<ol>
 					<li><strong>Copy an image URL</strong> by looking up an image (try <a href="http://images.google.com/" target="_blank">Google Images</a>), then right-clicking on the image and choosing "Copy Image URL" from the menu</li>
-					<li><strong>Add an image tag to the body of your HTML</strong> like so: <tt>&lt;img src="http://www.example.com/image.jpg"&gt;</tt> making sure to replace <tt>http://www.example.com/image.jpg</tt> with the URL you copied in the first step.</li>
+					<li><strong>Add an image tag to the body of your HTML</strong> like so: <code><tt>&lt;img src="http://www.example.com/image.jpg"&gt;</tt></code> making sure to replace <tt>http://www.example.com/image.jpg</tt> with the URL you copied in the first step.</li>
+					<li>Remember to indicate the source of the image! You can include the image link as plain text or as an actual hyperlink using <code>&lt;a&gt;</code> tag, like this: <code>&lt;a href="image/source/here.jpg"&gt;Here's the image link!&lt;/a&gt;</code>.</li>
 				</ol>
 
 				<a name="add-a-video"></a>
@@ -206,6 +208,7 @@ Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim
 				<ol>
 					<li><strong>Go to <a href="http://www.youtube.com/" target="_blank">YouTube</a> and choose a video</strong></li>
 					<li><strong>Copy the embed code</strong> by right-clicking on the video and choosing "Copy Embed Code"</li>
+					<li>The copied code will look something like this: <code><tt>&lt;iframe width="640" height="360" src="https://www.youtube.com/embed/jofNR_WkoCE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;</tt></code></li>
 					<li><strong>Paste the embed code</strong> into the body of your HTML file
 				</li></ol>
 				
@@ -286,6 +289,7 @@ Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim
 					     <font class="property-name">height:</font> <font class="value-name">auto</font>;<br>
 					}<br><br>
 
+				
 					<div class="alert alert-dismissable alert-info" role="alert">
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
 						<strong>Pro Tip!</strong> Notice that when we use classes (as opposed to tag names) we put a period before the name to indicate that it is not actually a tag name but a class name.
@@ -296,7 +300,8 @@ Extended by Jessica Wong in 2016. Extended and largely modified by Alexandra Kim
 
 					<img class="small-image" src="assets/imgs/fox.jpg"/>
 					<img class="medium-image" src="assets/imgs/fox.jpg"/>
-
+					<br>
+					<a href="https://i.pinimg.com/736x/53/ed/4a/53ed4a4f0c616f1db88aeb9f28a1ea73--fox-sketch-sketch-drawing.jpg">Here's the link for the cute fox above!</a>
 					</li>
 					<li class="list-group-item">
 					<h4>How to change style of one item</h4>
