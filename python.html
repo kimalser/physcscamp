@@ -58,12 +58,11 @@ Webpage created by Jessica Wong in 2016.
 				<div id="my-nav" class="col-md-3">
 					<ul id="sidebar" class="nav nav-pills nav-stacked" role="tablist" data-spy="affix" data-offset-top="250">
 						<li><a href="#setuppython">1. Getting Started</a></li>
-						<li><a href="#howtooutput">2. How to Output</a></li>
+						<li><a href="#howtooutput">2. Printing to the screen</a></li>
 						<li><a href="#variables">3. Variables</a></li>
 						<li><a href="#ifstatement">4. If Statements</a></li>
 						<li><a href="#forloop">5. For Loops</a></li>
-						<li><a href="#turtles">6. Turtles!</a></li>
-						<li><a href="#challengeactivities">7. Activities</a></li>
+						<li><a href="#turtles">6. Bonus: Turtles!</a></li>
 						
 						<li class="dropdown">
 							<a class="dropdown-toggle" data-toggle="dropdown" href="#more-information">More information<span class="caret"></span></a>
@@ -80,19 +79,36 @@ Webpage created by Jessica Wong in 2016.
 					<h3><span class="numbercircle">1</span> Getting Started</h3>
 					<ol class="list-group">
 						<li class="list-group-item"><strong>Open Firefox</strong> by double-clicking the icon on the desktop, or by clicking on the start menu and typing <code>Firefox</code> into the search bar and clicking on the Firefox application (you can also use another browser, such as Chrome or Safari)</li>
-						<li class="list-group-item"><strong>Log in</strong> to <a href="https://thimble.mozilla.org">Firefox Thimble</a> and open the file called <code>code.py</code>. We will be using this file to code in Python!</li>
+						<li class="list-group-item"><strong>Log in</strong> to <a href="https://thimble.mozilla.org">Firefox Thimble</a>, click your username on the top right, and then click <b>Your Projects</b>. Click the <b>Rocket Range</b> project, and click the file on the left called <code>student.py</code>. Thimble may say it doesn't know how to edit this file - just press <b>Try to edit it</b>. We will be using this file to code in Python!</li>
+						<li class="list-group-item">
+							Complete the exercises in this file to shoot rockets and see projectile motion in action! You can also test anything within the <code>test()</code> function included at the beginning of the file. To <b>execute</b> your code, save the file by pressing <b>Ctrl+S</b> while your cursor is inside the editor, and then press the <b>Refresh</b> icon in the preview window.
+						</li>
 						
 					</ol>
 
 					</section>
 					
 					<section id="howtooutput">
-					<h3><span class="numbercircle">2</span> How to Output</h3>
+					<h3><span class="numbercircle">2</span> Printing to the screen</h3>
 					<ol class="list-group">
-						<li class="list-group-item"><strong>Type <code>print(&#34;Hello World!&#34;)</code>, save </strong> the file and <strong> click </strong> the <code>run</code> button.</li>
+						<li class="list-group-item">
+							<strong>The <code>print()</code> function displays a message on the screen.</strong> 
+							<code>
+								print(<i>string1</i>, <i>string2</i>, ...)
+							</code> </li>
 							<ol>
+								<li class="list-group-item">
+									Try adding the line <code>print(&#34;Hello World!&#34;)</code> within the <code>test()</code> function, <b>save</b> the file with <b>Ctrl+S</b> and click the <b>refresh </b> button in the preview window.
+								</li>
+
 								<li class="list-group-item"><code>print()</code> tells Python what it is supposed to do (in this case, print something out to the screen).</li>
-								<li class="list-group-item"><code>&#34;Hello World!&#34;</code> tells Python what is supposed to be printed to screen. In Python, you need to enclose text phrases in quotes!</li>
+								<li class="list-group-item"><code>&#34;Hello World!&#34;</code> is a <b>string</b>, a text phrase enclosed in quotes. <code>print()</code> can output string values, as well as <i>variables</i>, as you'll see in the next section.
+								<li class="list-group-item">
+									You can combine multiple string values into a single string with the <code>+</code> sign. Try <code>print("super"+"cali"+"fragi"+"listic"+"expi"+"ali"+"docious")</code>!
+								</li>
+								<li class="list-group-item">
+									 When passing in multiple values to <code>print()</code>, they are separated by spaces automatically. Try <code>print("I'm", "a", "really", "long", "sentence!")</code>
+								</li>
 							</ol>
 						</ol>
 					
@@ -102,26 +118,37 @@ Webpage created by Jessica Wong in 2016.
 					<section id="variables">
 					<h3><span class="numbercircle">3</span> Variables</h3>
 					<ol class="list-group">
-						<li class="list-group-item"><strong>Variables are nothing but space in the computer’s memory to store values. You can give it a name and use that name to refer to the value stored in that space. The name can only contain letters, numbers and underscore.</strong></li>
+						<li class="list-group-item"><strong>Variables are boxes in the computer’s memory that store single values. You give each variable a name and use that name to refer to the value stored in that box.</strong> Variable names can only contain letters, numbers and the underscore <code>_</code>.</li>
 							
 						<li class="list-group-item">To create a variable, give the variable a name and assign it a value using the <code>=</code> sign.</li>
 							<ol>
-								<li class="list-group-item"><code>num = 1</code> means that we have made a variable called <i>num</i> and given it a value of <i>1</i>.</li>
-								<li class="list-group-item">Variables can store decimal values too. <code>myfloat = 7.2</code>.</li>
-								<li class="list-group-item">To store text, use single or double quotes. For example, <code>str_hw = &#34;Hello World!&#34;</code> or <code>mystring = &#39;hello&#39;</code>.</li>
+								<li class="list-group-item">
+
+									Storing <b>strings</b>: <code>my_name = "Thanos"</code> means that we have made a variable called <i>my_name</i> and given it a text value of <i>Thanos</i>.
+								</li>
+								<li class="list-group-item">
+									Variables can store <b>numbers</b> and expressions that evaluate to numbers too.
+									<br>For example, <code>body_temp = (98.6 - 32) * 5/9 </code> evaluates the expression to <code>37.0</code>, and stores it in <code>body_temp</code>.
+								</li>
+								<li class="list-group-item">
+									One more useful value type we can store is a <b>boolean</b>, either <code>True</code> or <code>False</code>. 
+									<br>Check the section on <a href="#comparisons">comparisons</a> for some expressions that can evaluate to boolean values.
+								</li>
 							</ol>
-						<li class="list-group-item"><strong>Exercise:</strong> Save your name into a variable <code>myname</code> and run <code>print("Hi " + myname) </code> </li>
+						
+						<li class="list-group-item"><strong>Exercise 1:</strong> Name your rocket. In the <code>namerocket()</code> function, store your name as a string into the variable <code>name</code>, save the file, and press run. Make sure that you indent your code in the function, and do this before the function returns! (<code>return name</code> should be the last line in this function)</li>
+						<li class="list-group-item"><strong>Exercise 2:</strong> Let's make those rockets fall! In the <code>setgravity()</code> function, set the value of <code>gravity</code> to a reasonable number, so that the rocket hits the ground around below where your name is displayed. Again, remember to keep your code indented and before the <code>return</code> statement!
 					</ol>
 					</section>
 
 					<section id="ifstatement">
-						<h3><span class="numbercircle">4</span> If Statements</h3>
+						<h3><span class="numbercircle">4</span> If statements</h3>
 						<ol class="list-group">
-							<li class="list-group-item">In Python you can use <strong><code>if</code> statements </strong>in the following way: <br />
+							<li class="list-group-item">In Python you can use <strong><code>if</code> statements </strong> to run commands under a certain <b>condition</b>. For example: <br>
 								<code>
 									age = 14<br>
 									if age > 20:<br>
-									&emsp;&emsp;&emsp;&emsp;print(&#39;You are old!&#39;)<br>
+									&emsp;&emsp;&emsp;&emsp;print(&#34;You are old!&#34;)
 								</code>
 								<div class="alert alert-dismissable alert-info" role="alert">
 									<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times</span></button>
@@ -130,51 +157,90 @@ Webpage created by Jessica Wong in 2016.
 								</li>
 							</ol>
 							
-							<ol class="list-group">
-							<li class="list-group-item"><strong>If-else statements are an extended form of if statements</strong>. The else statement tells Python what should happen if the if-statement is not true.</li>
+						<ol class="list-group">
+							<li class="list-group-item"><strong>If-else statements are an extended form of if statements</strong>. The <code>else</code> statement tells Python what should happen if the <code>if</code> condition is not true.</li>
 							<li class="list-group-item">
 								<code>
-									fruit = &#39;apple&#39;<br>
-									if fruit == &#39;apple&#39;:<br>
-									&emsp;&emsp;&emsp;&emsp;print(&#39;Yum! I love apples!&#39;)<br>
+									class_size = 20<br>
+									apples = 0 <br>
+									if apples >= class_size :<br>
+									&emsp;&emsp;&emsp;&emsp;print(&#34;I have enough apples for everybody!&#34;)<br>
 									else:<br>
-									&emsp;&emsp;&emsp;&emsp;print(&#39;No, I want an apple!&#39;)<br>
+									&emsp;&emsp;&emsp;&emsp;print(&#34;I don't have enough apples!&#34;)
 								</code>
 							</li>
-							<li class="list-group-item"><strong>Exercise: </strong> Create variables for your name and age. Display <code>&#34;Hi &lt;name&gt;, you can drive!&#34;</code> if your age is more than 16, otherwise display, <code>&#34;Hi &lt;name&gt;, you still have &lt;x&gt; years to go&#34;</code>, where <code>x</code> is the difference between your age and 16.</li>
 						</ol>
-							
 						<div class="alert alert-dismissable alert-info" role="alert">
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times</span></button>
-								<strong>Pro Tip!</strong> You are not limited to just checking to see if a variable is equal to a certain value. You can check for many different things. See the <a href="#comparisons">Comparison</a> section for more details
+								<strong>Pro Tip!</strong> You are not limited to just checking to see if a variable is equal to a certain value. You can check for many different things. See the <a href="#comparisons">Comparison</a> section for more details.
 						</div>
+						<ol class="list-group">
+							<li class="list-group-item"><strong>Exercise 3: </strong> Right now, the rocket keeps falling, even after it hits the ground! We want it to stop when it hits the ground. Within the <code>stoprocket(y, ground)</code> function, you're given two variables to use: <code>y</code>, the changing y coordinate of the rocket as it flies, and <code>ground</code>, the y coordinate of the ground (an unchanging value). Return <code>True</code> when the rocket should stop, and return <code>False</code> otherwise.
+							</li>
+							<li class="list-group-item"><b>Exercise 4</b>: Now that we have a working rocket simulation, a message below the simulation displays how far your rocket travelled horizontally. In <code>bestangle()</code>, adjust the value of <code>angle</code>, the angle in degrees above the ground that you want to shoot your rocket at to get the best distance travelled.
+							</li>
+						</ol>
+							
+						
 					</section>
 					
 					<section id="forloop">
 						<h3><span class="numbercircle">5</span> For Loops</h3>
 						<ol class="list-group">
-							<li class="list-group-item">What if you want to print <code>"Hello World!"</code> 5 times? 100 times? <strong><code>For</code> loops are used when you want instructions to run a certain number of times</strong>. Let's print <code>"Hello World!"</code> 5 times!</li>
-							<li class="list-group-item">
-							<code>
-							for x in range(5):<br>
-							&emsp;&emsp;&emsp;&emsp;print("Hello World!")<br>
-							</code></li>
+							<li class="list-group-item"><code>for</code> loops are used when you want instructions to repeat a certain number of times</strong>.
+							<br>For example, if we wanted to print <code>"Hello World!"</code> 5 times:</li>
+							
 							<ol>
-								<li class="list-group-item"><code>range(5)</code> gives a sequence of numbers starting from 0 and up to (but not including) 5. Each iteration of the loop, it saves the number into variable <code>x</code>. Try replacing <code>"Hello World!"</code> by <code>x</code> and see what happens!</li>
+								<li class="list-group-item">
+							<code>
+							for i in range(5):<br>
+							&emsp;&emsp;&emsp;&emsp;print("Hello World!")
+							</code></li>
+								<li class="list-group-item"><code>range(5)</code> gives a sequence of numbers starting from 0 and up to (but not including) 5. Each iteration of the loop, it saves the number into variable <code>i</code>. Try replacing <code>"Hello World!"</code> by <code>i</code> and see what happens!</li>
 							</ol>
-							<li class="list-group-item"><strong>Exercise:</strong> Calculate the square of each number from 1 to 10 using a loop.</li>
+							<li class="list-group-item"><strong>Exercise 5:</strong> Let the fireworks begin! Within the <code>fireworks()</code> function, we've provided a function you can call, <code>launch_rocket(<i>angle</i>)</code>. For instance, type <code>launch_rocket(90)</code> to shoot a rocket directly up. Using a <code>for</code> loop within <code>fireworks()</code>, launch 20 rockets with different angles.
+							</li>
 						</ol>
 					</section>
 					
 					<section id="turtles">
-						<h3><span class="numbercircle">6</span> Turtles!</h3>
-					
-					</section>
+						<h3><span class="numbercircle">6</span> Bonus: Turtles!</h3>
+						<ol class="list-group">
+							<li class="list-group-item">
+								Our code uses <code>turtle</code> graphics, a python library, to draw fireworks onto the Thimble webpage. Turtles are digital animals in Python that can move anywhere on the screen.<br>
+								Within the function <code>draw_house(house_turtle)</code>, we've given you a turtle for you to draw a house with - it's the black arrow in the center of the screen. Here are some simple commands that you can call on the turtle:
 
-					
-					<section id="challengeactivities">
-					<h3><span class="numbercircle">7</span>Activities</h3>
-					
+								<ol class="list-group">		
+									<li class="list-group-item">
+										<code>house_turtle.forward(distance)</code> makes the turtle walk forward by <code>distance</code>, a number you provide. The turtle walks in the direction it is headed (by default it is 0 degrees, or to the right)
+									</li>
+									<li class="list-group-item">
+										<code>house_turtle.back(distance)</code> makes the turtle walk backwards by <code>distance</code>, a number you provide.
+									</li>
+									<li class="list-group-item">
+										<code>house_turtle.right(angle)</code> turns the turtle right by <code>angle</code> degrees.
+									</li>
+									<li class="list-group-item">
+										<code>house_turtle.left(angle)</code> turns the turtle left by <code>angle</code> degrees.
+									</li>
+									<li class="list-group-item">
+										<code>house_turtle.setheading(angle)</code> takes in a number that represents an angle in degrees (e.g. 0 points to the right, 90 points up, 180 points left, and 270 points south). This command tells the turtle to face in that direction, which you can see by the little arrow representing the turtle.
+									</li>
+									<li class="list-group-item">
+										<code>house_turtle.goto(x, y)</code> takes two numbers representing the screen x and y coordinates and sends the turtle there in a straight line. <code>(0, 0)</code> is the center of the screen.
+									</li>
+
+									<li class="list-group-item">
+										You can find the complete list of turtle commands here: <a href="https://docs.python.org/3.7/library/turtle.html">https://docs.python.org/3.7/library/turtle.html</a>
+									</li>
+								</ol>
+							</li>
+
+
+							<li class="list-group-item">
+								Feel free to also look inside and play with <code>draw.py</code>, where all the Python magic happens to simulate and draw your rockets!
+							</li>
+						</ol>
 					</section>
 
 					<hr/>
